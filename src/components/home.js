@@ -9,3 +9,8 @@ getData("users")
     addMarkup(tBodyEl, markup);
   })
   .catch((error) => console.log(error));
+
+tBodyEl.addEventListener("click", (event) => {
+  location.href =
+    "/user.html?userid=" + event.target.closest(".js-tr").dataset.userid;
+});
